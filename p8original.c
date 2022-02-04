@@ -1,9 +1,9 @@
 #include<stdio.h>
-struct_complex
+struct _complex
 {
   float real,imaginary;
 };
-typedef struct_complex complex;
+typedef struct _complex complex;
 int get_n()
 {
   int n;
