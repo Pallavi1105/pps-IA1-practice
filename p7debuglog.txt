@@ -1,4 +1,4 @@
-gcc -g p7original.c
+gcc -g p7final.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -16,24 +16,30 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x856: file p7original.c, line 32.
+Breakpoint 1 at 0x87c: file p7final.c, line 28.
 (gdb) r
 Starting program: /home/runner/pps-IA1-practice-1/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p7original.c:32
-32  c1 = input();
+Breakpoint 1, main () at p7final.c:28
+28    a=input_complex();
 (gdb) n
-Enter the Real part: 5
-Enter the Imaginary part: 3
-33  c2 = input();
+enter the values
+2
+5
+2
+29    b=input_complex();
 (gdb) n
-Enter the Real part: 6
-Enter the Imaginary part: 7
-34  sum = add(c1, c2);
+enter the values
+6
+7
+30    c=add(a,b);
 (gdb) n
-35  output(c1, c2, sum);
+31    output(a,b,c);
 (gdb) n
-The sum of 5.0 + 3.0i and 6.0 + 7.0i is 11.0 + 10.0i
-36  return 0;
+32    return 0;
+(gdb) n
+33  }(gdb) c
+Continuing.
+2.000000 + 5.000000i + 2.000000 + 6.000000i is 4.000000 + 11.000000i[Inferior 1 (process 112) exited normally]
 (gdb) 
