@@ -45,7 +45,7 @@ $1 = 2
 main () at p4final.c:40
 40    input_array(n,a);
 (gdb) s
-input_array (n=2, a=0x7ffd213d7830) at p4final.c:11
+input_array (n=2, a=0x7ffef6cf6370) at p4final.c:11
 11    int i,sum=0;
 (gdb) n
 12    for(i=0;i<n;i++)
@@ -54,14 +54,14 @@ input_array (n=2, a=0x7ffd213d7830) at p4final.c:11
 (gdb) n
 15      scanf("%d",&a[i]);
 (gdb) n
-enter the number3
+enter the number4
 12    for(i=0;i<n;i++)
 (gdb) n
 14      printf("enter the number");
 (gdb) n
 15      scanf("%d",&a[i]);
 (gdb) n
-enter the number7
+enter the number6
 12    for(i=0;i<n;i++)
 (gdb) n
 17  }
@@ -71,7 +71,7 @@ $2 = 2
 main () at p4final.c:41
 41    sum=sum_n_arrays(n,a);
 (gdb) s
-sum_n_arrays (n=2, a=0x7ffd213d7830) at p4final.c:20
+sum_n_arrays (n=2, a=0x7ffef6cf6370) at p4final.c:20
 20    int i,sum=0;
 (gdb) n
 21    for(i=0;i<n;i++)
@@ -93,7 +93,7 @@ $3 = 2
 main () at p4final.c:42
 42    output(n,a,sum);
 (gdb) s
-output (n=2, a=0x7ffd213d7830, sum=10) at p4final.c:30
+output (n=2, a=0x7ffef6cf6370, sum=10) at p4final.c:30
 30    for(i=1;i<n;i++)
 (gdb) n
 32      printf("%d +",i);
@@ -107,5 +107,5 @@ output (n=2, a=0x7ffd213d7830, sum=10) at p4final.c:30
 main () at p4final.c:43
 43  }(gdb) c
 Continuing.
-1 +7 is 10[Inferior 1 (process 1090) exited normally]
+1 +6 is 10[Inferior 1 (process 1359) exited normally]
 (gdb) 
