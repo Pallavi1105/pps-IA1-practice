@@ -43,12 +43,13 @@ complex add_n_complex(int n,complex c[n])
   r.imaginary=0;
   for(i=0;i<n;i++)
   r=add(r,c[i]);
+  return r;
 }
 
 void output(int n,complex c[n],complex result)
 {
   int i ;
-  for (i=0;i<n;i++)
+  for (i=0;i<n-1;i++)
   printf("%f + %fi", c[i].real, c[i].imaginary);
   printf("+%f + %fi is %f + %fi", c[n-1].real,c[n-1].imaginary,result.real,result.imaginary);
 
